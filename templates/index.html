@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>花瓣网爬虫</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        label {
+            display: inline-block;
+            width: 100px;
+            margin-right: 20px;
+            text-align: right;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>花瓣网爬虫</h1>
+        <form action="/scrape" method="post">
+            <div class="form-group">
+                <div class="rhombus">爬</div>
+                <label for="url">爬取地址:</label>
+                <input type="text" name="url" required>
+            </div>
+            <div class="form-group">
+                <div class="rhombus">存</div>
+                <label for="save_path">保存路径:</label>
+                <input type="text" name="save_path" required>
+            </div>
+            <div class="form-group">
+                <div class="rhombus">数</div>
+                <label for="max_images_to_scrape">最大抓取图片数量:</label>
+                <input type="number" name="max_images_to_scrape" min="1" max="1000" value="100" required>
+            </div>
+            <button type="submit">开始</button>
+        </form>
+    </div>
+</body>
+</html>

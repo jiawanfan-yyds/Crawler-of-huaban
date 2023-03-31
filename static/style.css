@@ -1,0 +1,116 @@
+/* 设置背景图片 */
+body {
+  background-image: url("../static/background/background1.png");
+  background-size: cover;
+}
+
+/* 设置标题样式 */
+h1 {
+  text-align: center;
+  color: #e66262;
+  text-shadow: 2px 2px 2px #000;
+  position: relative; /* 设置相对定位 */
+  top: -100px; /* 向上移动标题，值为负数 */
+  left: 200px; /* 向右移动标题 */
+  font-size: 50px;
+}
+
+/* 设置标签样式 */
+label[for="url"], label[for="save_path"], label[for="max_images_to_scrape"] {
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+  background: linear-gradient(90deg, #ff6b6b, #ffe66d);
+  background-size: 200% auto;
+  color: #7342c2;
+  animation: gradient 5s ease-in-out infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0 50%;
+    color: #7342c2;
+  }
+  50% {
+    background-position: 100% 50%;
+    color: #6bffae;
+  }
+  100% {
+    background-position: 0 50%;
+    color: #7342c2;
+  }
+}
+
+
+label[for="url"]:hover,label[for="save_path"]:hover,label[for="max_images_to_scrape"]:hover {
+  transform: scale(1.1);
+}
+
+
+/* 设置容器样式 */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px; /* 设置顶部外边距 */
+}
+
+/* 设置表单组样式 */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  margin-bottom: 50px;
+  position: relative;
+  top: 200px;
+  right: 250px;
+  color: rgb(206, 228, 82);
+}
+
+/* 设置文本框样式 */
+input[type="text"], input[type="number"] {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+}
+
+/* 设置提交按钮样式 */
+button[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #4CAF50;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000;
+  box-shadow: 0px 0px 5px #000;
+  cursor: pointer;
+  position: relative; /* 设置相对定位 */
+  top: 300px; /* 向上移动标题 */
+  right: 10px;
+}
+
+/* 设置提交按钮鼠标悬停样式 */
+button[type="submit"]:hover {
+  background-color: #3E8E41;
+}
+
+.rhombus {
+  width: 30px;
+  height: 30px;
+  transform: rotate(45deg);
+  background-color: #FFF;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 0px 0px 1px #000;
+  box-shadow: 0px 0px 5px #000;
+}
